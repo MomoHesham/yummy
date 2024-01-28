@@ -1,0 +1,152 @@
+
+
+#loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    color: #fff;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+  }
+  
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 
+      2em -2em 0 0em, 3em 0 0 -1em, 
+      2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 
+      2em -2em 0 0, 3em 0 0 0.2em, 
+      2em 2em 0 0, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+       -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+       -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+       -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+    
+#contacUs .alert, .searchContainer{
+display: none;
+}
+#contacUs{
+    display: none;
+}
+/* navbar */
+#navbar .menuBox{
+  opacity: 0;
+}
+
+li.menuItem {
+    overflow: hidden;
+    position: relative;
+    height: 25px;
+}
+
+li.menuItem span{
+position: absolute;
+top: 200px;
+    transition: all .5s;
+    display: inline-block;
+}
+li.menuItem span.open{
+    top: 0;
+}
+#navbar .menubar{
+    position: fixed;
+    left: -160px;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+#navbar .open-close{
+    width: 70px;
+}
+#navbar i{
+    cursor: pointer;
+}
+#navbar .menubar #closeIcon{
+    display: none;
+}
+#navbar .menubar .menuBox .menuItems .menuItem{
+    cursor: pointer;
+}
+/* navbar */
+/* category */
+section .categoryContent:hover .imgoverlay, section .mealContent:hover .imgoverlay{ 
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+}
+section .categoryContent, section .mealContent{
+    border-radius: 10px;
+    overflow: hidden;
+}
+section  .imgoverlay{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: -100%;
+    right: 0;
+    transition: all 0.5s;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* category */
+
+/* ingredients */
+section .ingredientContent{
+    color: white;
+
+}
+/* ingredients */
+.searchContainer input::placeholder {
+    color: rgb(157, 157, 157) !important;
+}
